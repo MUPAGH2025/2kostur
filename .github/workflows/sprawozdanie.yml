@@ -1,7 +1,13 @@
 name: sprawozdanie
 on: push
 jobs:
-  polf:
+  pdf_convert:
     runs-on: ubuntu-22.04
     steps:
-      - run: sudo apt-get install texlive-xetex inkscape pandoc 
+      - run: sudo apt-get install texlive-xetex inkscape pandoc
+      - uses: actions/checkout@v4
+      - run: pip install ipykernel nbconvert matplotlib numpy pint open-atmos-jupyter-utils scipy
+      - run: python -m nbconvert --to pdf --execute sprawozdanie.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          path: sprawozdanie.pdf
