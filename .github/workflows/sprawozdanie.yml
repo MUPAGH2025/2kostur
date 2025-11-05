@@ -10,4 +10,4 @@ jobs:
       - run: python -m nbconvert --to pdf --execute mpdata_2d_numpy_only.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: mpdata_2d_numpy_only.pdf
+          path: anim.gif
