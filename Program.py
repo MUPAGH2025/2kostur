@@ -4,6 +4,7 @@ from open_atmos_jupyter_utils import show_anim
 from PyMPDATA import ScalarField, Solver, Stepper, VectorField, Options
 from PyMPDATA.boundary_conditions import Constant
 import pandas as pd
+import scipy
 
 
 class ShallowWaterEquationsIntegrator:
