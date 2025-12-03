@@ -1,4 +1,3 @@
-import functools, pint, scipy, numpy, mendeleev, ipywidgets
 import numpy as np
 from matplotlib import pyplot
 from open_atmos_jupyter_utils import show_anim
@@ -6,9 +5,6 @@ from PyMPDATA import ScalarField, Solver, Stepper, VectorField, Options
 from PyMPDATA.boundary_conditions import Constant
 import pandas as pd
 
-
-si = pint.UnitRegistry()
-si.setup_matplotlib()
 
 class ShallowWaterEquationsIntegrator:
     def __init__(self, *, h_initial: np.ndarray, options: Options, bathymetry: np.ndarray):
@@ -188,7 +184,7 @@ class WaveByBathymetry:
     
     #  Do poprawy
     def calc_force(self, frame):
-        rho_w = 997. #* si.kg / si.m**3
+        rho_w = 997.
 
         x_range = slice(0, self.x_len // 3)
         y_range = slice(5*self.y_len//6,self.y_len )
