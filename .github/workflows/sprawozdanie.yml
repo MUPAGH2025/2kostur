@@ -8,6 +8,22 @@ jobs:
       - uses: actions/checkout@v4
       - run: pip install ipykernel nbconvert matplotlib numpy pint open-atmos-jupyter-utils scipy PyMPDATA pandas
       - run: python -m nbconvert --to pdf --execute sprawozdanie.ipynb
+      - run: python get_gif.py
       - uses: actions/upload-artifact@v4
         with:
-          path: out1.gif, out2.gif, out3.gif, out4.gif
+          path: out1.gif
+      - uses: actions/upload-artifact@v4
+        with:
+          path: out2.gif,
+      - uses: actions/upload-artifact@v4
+        with:
+          path: out3.gif,
+      - uses: actions/upload-artifact@v4
+        with:
+          path: out4.gif,
+      - uses: actions/upload-artifact@v4
+        with:
+          path: out0.gif,
+      - uses: actions/upload-artifact@v4
+        with:
+          path: vh.gif,
