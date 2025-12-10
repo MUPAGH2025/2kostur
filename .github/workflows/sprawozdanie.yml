@@ -1,4 +1,4 @@
-name: sprawozdanie_yml
+name: sprawozdanie
 on: push
 jobs:
   pdf_convert:
