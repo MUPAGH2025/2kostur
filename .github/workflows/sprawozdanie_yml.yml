@@ -1,4 +1,4 @@
-name: sprawozdanie
+name: sprawozdanie_yml
 on: push
 jobs:
   pdf_convert:
@@ -7,7 +7,7 @@ jobs:
       - run: sudo apt-get install texlive-xetex inkscape pandoc
       - uses: actions/checkout@v4
       - run: pip install ipykernel nbconvert matplotlib numpy pint open-atmos-jupyter-utils scipy PyMPDATA pandas
-      - run: python -m nbconvert --to pdf --execute sprawozdanie.ipynb
+      - run: python -m nbconvert --to pdf --execute sprawozdanie_.ipynb
       - run: python get_gif.py
       - uses: actions/upload-artifact@v4
         with:
@@ -29,4 +29,4 @@ jobs:
           path: vh.gif
       - uses: actions/upload-artifact@v4
         with:
-          path: sprawozdanie.pdf
+          path: sprawozdanie_.pdf
