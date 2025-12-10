@@ -11,10 +11,4 @@ jobs:
       - run: python get_gif.py
       - uses: actions/upload-artifact@v4
         with:
-          path: out1.gif
-                out2.gif
-                out3.gif
-                out4.gif
-                out0.gif
-                vh.gif
-                sprawozdanie_.pdf
+          path: sprawozdanie_.pdf
