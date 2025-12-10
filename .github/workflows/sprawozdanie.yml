@@ -12,21 +12,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           path: out1.gif
-      - uses: actions/upload-artifact@v4
-        with:
-          path: out2.gif
-      - uses: actions/upload-artifact@v4
-        with:
-          path: out3.gif
-      - uses: actions/upload-artifact@v4
-        with:
-          path: out4.gif
-      - uses: actions/upload-artifact@v4
-        with:
-          path: out0.gif
-      - uses: actions/upload-artifact@v4
-        with:
-          path: vh.gif
-      - uses: actions/upload-artifact@v4
-        with:
-          path: sprawozdanie_.pdf
+                out2.gif
+                out3.gif
+                out4.gif
+                out0.gif
+                vh.gif
+                sprawozdanie_.pdf
